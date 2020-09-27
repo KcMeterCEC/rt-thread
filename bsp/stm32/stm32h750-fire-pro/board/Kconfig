@@ -9,6 +9,17 @@ config SOC_STM32H750XB
 
 menu "Onboard Peripheral Drivers"
 
+    config BSP_USING_SDRAM
+        bool "Enable SDRAM"
+        select BSP_USING_FMC
+        default n
+
+    config BSP_USING_LCD
+        bool "Enable LCD"
+        select BSP_USING_LTDC
+        select BSP_USING_SDRAM
+        default n
+
 endmenu
 
 menu "On-chip Peripheral Drivers"
@@ -28,6 +39,13 @@ menu "On-chip Peripheral Drivers"
                 default y
 
         endif
+
+    config BSP_USING_FMC
+        bool
+        default n
+    config BSP_USING_LTDC
+        bool
+        default n                
         
     source "../libraries/HAL_Drivers/Kconfig"
     

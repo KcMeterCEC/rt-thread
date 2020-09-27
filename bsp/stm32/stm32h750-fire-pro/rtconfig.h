@@ -157,11 +157,14 @@
 
 /* Onboard Peripheral Drivers */
 
+#define BSP_USING_SDRAM
+
 /* On-chip Peripheral Drivers */
 
 #define BSP_USING_GPIO
 #define BSP_USING_UART
 #define BSP_USING_UART1
+#define BSP_USING_FMC
 
 /* Board extended module Drivers */
 

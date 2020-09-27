@@ -46,3 +46,4 @@ Backup of template.ewp
 *.scvd
 *.dep
 /.config
+project.*

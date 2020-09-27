@@ -8,8 +8,8 @@
   *          is using in the C source code, usually in main.c. This file contains:
   *           - Configuration section that allows to select:
   *              - The STM32H7xx device used in the target application
-  *              - To use or not the peripheral’s drivers in application code(i.e.
-  *                code will be based on direct access to peripheral’s registers
+  *              - To use or not the peripheralï¿½s drivers in application code(i.e.
+  *                code will be based on direct access to peripheralï¿½s registers
   *                rather than drivers API), this option is controlled by
   *                "#define USE_HAL_DRIVER"
   *
@@ -51,6 +51,8 @@
   */
 #if !defined  (STM32H7)
 #define STM32H7
+//! application address for fire-hx750-pro
+#define APPLICATION_ADDRESS   (0x90000000)
 #endif /* STM32H7 */
 
 
